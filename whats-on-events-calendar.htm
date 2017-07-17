@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/1/jquery.selectBoxIt.css" type="text/css">
+<link rel="stylesheet" href="/css/1/calendar.css" type="text/css">
+
+[[!querystring]]
+
+[[!+GET.d:isempty=`[[!currentDateWhatsOn]]`:toPlaceholder=`datePlaceholder`:notempty=``]]
+[[!+GET.type:isempty=``:toPlaceholder=`get-event-type`:notempty=``]]
+
+<div class="cf" style="background-color: #eee; padding: 20px; box-sizing: border-box; height: 350px">
+<h2 style="margin-bottom: 20px;">Events Calendar</h2>
+<div class="cf">
+
+<div id="stalbans-calendar"></div>
+
+<form action="[[~4]]" method="get" id="frmDate" style="overflow: hidden; width: 100%; position: relative; box-sizing: border-box;">
+
+<div style="position: absolute; left:-999px;">
+<input id="datepicker" type="text" name="d" onfocus="$('#frmDate').submit()">
+</div>
+</form>
+
+<p style="margin-top: 20px; display: none;">[[!querystringAddOneDay]]</p>
+
+</div>
+
+</div>
