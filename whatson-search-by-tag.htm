@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=[[++modx_charset]]" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+<title>[[*id:isnot=`1`:then=`[[*pagetitle]] - `]]The Cathedral and Abbey Church of Saint Alban</title>
+<base href="https://www.stalbanscathedral.org/">
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet" type="text/css">
+
+<meta name="robots" content="index, follow" />
+
+<meta name="description" content="[[*description:default=`Inspired by Alban, Britain's first Christian martyr, sustained by our tradition of hospitality, worship, and learning, and renowned as a place of pilgrimage, the Cathedral is a community of welcome and witness.`]]">
+
+<link type="text/css" rel="stylesheet" href="/src/css/jquery.mmenu.css" />
+	
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/src/js/jquery.mmenu.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	$('div#menu').mmenu({
+	slidingSubmenus: false
+	});
+});
+
+</script>
+
+[[*show-event:is=`1`:then=`[[$resizeiframe-script]]`]]
+[[*show-merchandise:is=`1`:then=`[[$resizeiframe-script]]`]]
+
+[[*show-flexslider-banner:is=`1`:then=`[[$flexslider-script-v2]]`]]
+
+<link type="text/css" rel="stylesheet" href="/css/1/font-awesome.css" />
+<link type="text/css" rel="stylesheet" href="/css/1/main.css?201603181353" />
+
+[[*head-extra]]
+
+</head>
+
+<body>
+<div id="page">
+
+<div class="header-wrapper">
+<div id="header">
+<a href="/" id="logo"><img src="/images/common/logo.png" alt="St Albans Cathedral"></a>
+[[$search]]
+<div class="menu">
+<a href="#menu"></a>
+<span class="sitename">[[++site_name]]</span>
+</div><!-- end menu -->
+</div><!-- end header -->
+[[$toolbar-v2]]
+</div><!-- .header-wrapper -->
+
+<div id="nav">
+<div class="row">
+[[Wayfinder?
+&startId=`0`
+&excludeDocs =`1`
+&hideSubMenus=`0`
+&level=`2`
+]]
+</div><!-- #nav -->
+</div><!-- .row -->
+
+[[*show-flexslider-banner:is=`1`:then=`[[$flexslider-banner]]`]]
+
+<div id="content">
+<div class="row cf">
+
+[[$whats-on-col-narrow]]
+[[$whats-on-col-main]]
+
+</div><!-- end row -->
+</div><!-- end content -->
+
+[[$footer-v2]]
+
+<div id="menu">
+[[Wayfinder?
+&startId=`0`
+&hideSubMenus=`0`
+&level=`0`
+&hereClass=`Selected`
+]]
+</div>
+
+</div><!-- end page -->
+
+[[$google-analytics]]
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="/js/jquery.selectBoxIt.min.js"></script>
+
+<script>
+
+$(function() {
+  $("select").selectBoxIt({
+    showEffect: "fadeIn",
+    showEffectSpeed: 100,
+    hideEffect: "fadeOut",
+    hideEffectSpeed: 100,
+    showFirstOption: true
+  });
+});
+
+</script>
+
+</body>
+</html>
