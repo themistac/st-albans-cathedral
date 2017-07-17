@@ -1,0 +1,63 @@
+<div id="col-main" style="float: right;">
+
+<h1>Events [[!If?&subject=`[[!+GET.d]]`&operator=`isempty`&then=`from`&else=`on`]] [[+datePlaceholder:strtotime:date=`%a, %e %b %Y`]]</h1>
+
+<div id="catalogue" class="cf">
+[[!getResources?
+&parents=`[[*whats-on-folders-to-search-in]]`
+&tpl=`tpl_gridCatalogue`
+&tplOdd=`tpl_gridCatalogueOdd`
+&includeTVs=`1`
+&processTVs=`1`
+&tvPrefix=``
+&sortbyTV=`event-date`
+&sortdirTV=`ASC`
+&sortbyTVType=`datetime`
+&tvFilters=`event-date[[!If?&subject=`[[!+GET.d]]`&operator=`isempty`&then=`>=[[!currentDateYesterdayWhatsOn]]`&else=`==[[!+datePlaceholder]]`]]%,whats-on-tags==%[[!+get-event-type]]%`
+&limit=`10`
+&showHidden=`1`
+]]
+
+<div class="clear"><!-- clear float --></div>
+
+<h2 style="margin: 5px 0 10px;">Daily Events</h2>
+
+[[!getResources?
+&parents=`-1`
+&tpl=`tpl_gridCatalogue`
+&tplOdd=`tpl_gridCatalogueOdd`
+&includeTVs=`1`
+&processTVs=`1`
+&hideContainers=`1`
+&tvPrefix=``
+&resources=`[[*upcoming-to-show]]` 
+&sortby=`FIELD(modResource.id,[[*upcoming-to-show]])`
+&sortdir=`ASC`
+&limit=`99`
+]]
+
+</div><!-- end whatson -->
+
+
+<script type="text/javascript" src="/js/zebra_datepicker.js"></script>
+<script>
+$(document).ready(function() {
+    $('#datepicker').Zebra_DatePicker({
+      direction: true ,
+      show_select_today: false,
+      show_clear_date: false,
+      start_date: '[[!+datePlaceholder]]',
+      always_visible: $('#stalbans-calendar')
+    });
+
+    $('#datepicker-2').Zebra_DatePicker({
+      direction: true ,
+      start_date: '[[!+datePlaceholder]]'
+    });
+});
+</script>
+
+
+<p><a href="[[~7]]" class="linkbutton">See our services today at the Cathedral</a></p>
+
+</div><!-- col-main -->
