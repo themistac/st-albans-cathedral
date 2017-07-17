@@ -1,0 +1,32 @@
+<div class="cf" style="background-color: #eee; padding: 20px; box-sizing: border-box; margin-top: 20px; position: relative;">
+<h2 style="margin-bottom: 20px;">Browse Events</h2>
+<div class="cf">
+<form action="[[~4]]" method="get">
+<select name="type" style="width:100%; margin: top;">
+<option value=""[[+get-event-type:is=``:then=` selected`]]>All events</option>
+[[getResources?
+&parents=`712`
+&tpl=`tpl_eventTypeList`
+&includeTVs=`1`
+&processTVs=`1`
+&tvPrefix=``
+&limit=`0`
+&sortby=`menuindex`
+&sortdir=`asc`
+]]
+</select>
+<div class="cf" style="margin-top: 20px;">
+
+<!-- <div class="col-6">
+<input id="datepicker-2" type="text" name="d">
+</div> -->
+
+<div class="col-12">
+<input type="submit" name="Search" value="Find" class="button button-light">
+</div>
+</div>
+</form>
+
+</div>
+
+</div>
