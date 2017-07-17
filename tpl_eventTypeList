@@ -1,0 +1,1 @@
+<option value="[[+event-type-value]]"[[+get-event-type:is=`[[+event-type-value]]`:then=` selected`]]>[[+event-type-name]]</option>
